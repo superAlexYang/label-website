@@ -1,0 +1,849 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}Flask Basics{% endblock %}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/main111.css">
+
+    </head>
+    <body>
+      <div class="col-md-12 label-block" style="height:100vh">
+        <form action="{{ url_for('index') }}">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Back Home</button>
+          </form>
+
+          <form action="{{ url_for('save_RACE') }}" method="POST">
+            <input type = "hidden" name = "image_name" value = "{{imageDict['image_name']}},{{imageDict2['image_name']}},{{imageDict3['image_name']}},{{imageDict4['image_name']}},{{imageDict5['image_name']}},{{imageDict6['image_name']}},{{imageDict7['image_name']}},{{imageDict8['image_name']}},{{imageDict9['image_name']}},{{imageDict10['image_name']}},{{imageDict11['image_name']}},{{imageDict12['image_name']}},{{imageDict13['image_name']}},{{imageDict14['image_name']}},{{imageDict15['image_name']}},{{imageDict16['image_name']}},{{imageDict17['image_name']}},{{imageDict18['image_name']}},{{imageDict19['image_name']}},{{imageDict20['image_name']}},{{imageDict21['image_name']}},{{imageDict22['image_name']}},{{imageDict23['image_name']}},{{imageDict24['image_name']}},{{imageDict25['image_name']}},{{imageDict26['image_name']}},{{imageDict27['image_name']}},{{imageDict28['image_name']}},{{imageDict29['image_name']}},{{imageDict30['image_name']}},{{imageDict31['image_name']}},{{imageDict32['image_name']}},{{imageDict33['image_name']}},{{imageDict34['image_name']}},{{imageDict35['image_name']}},{{imageDict36['image_name']}},{{imageDict37['image_name']}},{{imageDict38['image_name']}},{{imageDict39['image_name']}},{{imageDict40['image_name']}},{{imageDict41['image_name']}},{{imageDict42['image_name']}},{{imageDict43['image_name']}},{{imageDict44['image_name']}},{{imageDict45['image_name']}},{{imageDict46['image_name']}},{{imageDict47['image_name']}},{{imageDict48['image_name']}}" />
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h12 id="image-title">1</h12>
+          <img class=".label-image" src="../static/Pics/{{imageDict[     'image_name']}}"/ height="100" width="100">
+        <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[0]}}">
+                <p class="label-row">
+                {% for choice in options.values()[0] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[0]}}-{{choice}}" name="{{options.keys()[0]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[0]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">2</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict2['image_name']}}" / height="100" width="100">
+           <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[1]}}">
+                <p class="label-row">
+                {% for choice in options.values()[1] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[1]}}-{{choice}}" name="{{options.keys()[1]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[1]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+      </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">3</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict3['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[2]}}">
+                <p class="label-row">
+                {% for choice in options.values()[2] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[2]}}-{{choice}}" name="{{options.keys()[2]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[2]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">4</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict4['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[3]}}">
+                <p class="label-row">
+                {% for choice in options.values()[3] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[3]}}-{{choice}}" name="{{options.keys()[3]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[3]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">5</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict5['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[4]}}">
+                <p class="label-row">
+                {% for choice in options.values()[4] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[4]}}-{{choice}}" name="{{options.keys()[4]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[4]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">6</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict6['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[5]}}">
+                <p class="label-row">
+                {% for choice in options.values()[5] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[5]}}-{{choice}}" name="{{options.keys()[5]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[5]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">7</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict7['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[6]}}">
+                <p class="label-row">
+                {% for choice in options.values()[6] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[6]}}-{{choice}}" name="{{options.keys()[6]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[6]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">8</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict8['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[7]}}">
+                <p class="label-row">
+                {% for choice in options.values()[7] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[7]}}-{{choice}}" name="{{options.keys()[7]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[7]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">9</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict9['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[8]}}">
+                <p class="label-row">
+                {% for choice in options.values()[8] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[8]}}-{{choice}}" name="{{options.keys()[8]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[8]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">10</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict10['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[9]}}">
+                <p class="label-row">
+                {% for choice in options.values()[9] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[9]}}-{{choice}}" name="{{options.keys()[9]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[9]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">11</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict11['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[10]}}">
+                <p class="label-row">
+                {% for choice in options.values()[10] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[10]}}-{{choice}}" name="{{options.keys()[10]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[10]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">12</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict12['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[11]}}">
+                <p class="label-row">
+                {% for choice in options.values()[11] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[11]}}-{{choice}}" name="{{options.keys()[11]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[11]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">13</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict13['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[12]}}">
+                <p class="label-row">
+                {% for choice in options.values()[12] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[12]}}-{{choice}}" name="{{options.keys()[12]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[12]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">14</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict14['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[13]}}">
+                <p class="label-row">
+                {% for choice in options.values()[13] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[13]}}-{{choice}}" name="{{options.keys()[13]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[13]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">15</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict15['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[14]}}">
+                <p class="label-row">
+                {% for choice in options.values()[14] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[14]}}-{{choice}}" name="{{options.keys()[14]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[14]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">16</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict16['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[15]}}">
+                <p class="label-row">
+                {% for choice in options.values()[15] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[15]}}-{{choice}}" name="{{options.keys()[15]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[15]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">17</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict17['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[16]}}">
+                <p class="label-row">
+                {% for choice in options.values()[16] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[16]}}-{{choice}}" name="{{options.keys()[16]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[16]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">18</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict18['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[17]}}">
+                <p class="label-row">
+                {% for choice in options.values()[17] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[17]}}-{{choice}}" name="{{options.keys()[17]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[17]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">19</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict19['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[18]}}">
+                <p class="label-row">
+                {% for choice in options.values()[18] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[18]}}-{{choice}}" name="{{options.keys()[18]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[18]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">20</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict20['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[19]}}">
+                <p class="label-row">
+                {% for choice in options.values()[19] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[19]}}-{{choice}}" name="{{options.keys()[19]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[19]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">21</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict21['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[20]}}">
+                <p class="label-row">
+                {% for choice in options.values()[20] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[20]}}-{{choice}}" name="{{options.keys()[20]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[20]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">22</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict22['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[21]}}">
+                <p class="label-row">
+                {% for choice in options.values()[21] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[21]}}-{{choice}}" name="{{options.keys()[21]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[21]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">23</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict23['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[22]}}">
+                <p class="label-row">
+                {% for choice in options.values()[22] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[22]}}-{{choice}}" name="{{options.keys()[22]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[22]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">24</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict24['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[23]}}">
+                <p class="label-row">
+                {% for choice in options.values()[23] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[23]}}-{{choice}}" name="{{options.keys()[23]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[23]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+
+
+
+
+<div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">25</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict25['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[24]}}">
+                <p class="label-row">
+                {% for choice in options.values()[24] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[24]}}-{{choice}}" name="{{options.keys()[24]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[24]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">26</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict26['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[25]}}">
+                <p class="label-row">
+                {% for choice in options.values()[25] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[25]}}-{{choice}}" name="{{options.keys()[25]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[25]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">27</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict27['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[26]}}">
+                <p class="label-row">
+                {% for choice in options.values()[26] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[26]}}-{{choice}}" name="{{options.keys()[26]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[26]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">28</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict28['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[27]}}">
+                <p class="label-row">
+                {% for choice in options.values()[27] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[27]}}-{{choice}}" name="{{options.keys()[27]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[27]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">29</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict29['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[28]}}">
+                <p class="label-row">
+                {% for choice in options.values()[28] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[28]}}-{{choice}}" name="{{options.keys()[28]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[28]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">30</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict30['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[29]}}">
+                <p class="label-row">
+                {% for choice in options.values()[29] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[29]}}-{{choice}}" name="{{options.keys()[29]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[29]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">31</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict31['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[30]}}">
+                <p class="label-row">
+                {% for choice in options.values()[30] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[30]}}-{{choice}}" name="{{options.keys()[30]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[30]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">32</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict32['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[3]}}">
+                <p class="label-row">
+                {% for choice in options.values()[31] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[31]}}-{{choice}}" name="{{options.keys()[31]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[31]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">33</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict33['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[32]}}">
+                <p class="label-row">
+                {% for choice in options.values()[32] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[32]}}-{{choice}}" name="{{options.keys()[32]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[32]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">34</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict24['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[33]}}">
+                <p class="label-row">
+                {% for choice in options.values()[33] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[33]}}-{{choice}}" name="{{options.keys()[33]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[33]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+
+
+<div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">35</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict35['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[34]}}">
+                <p class="label-row">
+                {% for choice in options.values()[34] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[34]}}-{{choice}}" name="{{options.keys()[34]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[34]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">36</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict36['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[35]}}">
+                <p class="label-row">
+                {% for choice in options.values()[35] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[35]}}-{{choice}}" name="{{options.keys()[35]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[35]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">37</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict37['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[36]}}">
+                <p class="label-row">
+                {% for choice in options.values()[36] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[36]}}-{{choice}}" name="{{options.keys()[36]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[36]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">38</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict38['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[37]}}">
+                <p class="label-row">
+                {% for choice in options.values()[37] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[37]}}-{{choice}}" name="{{options.keys()[37]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[37]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">39</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict39['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[38]}}">
+                <p class="label-row">
+                {% for choice in options.values()[38] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[38]}}-{{choice}}" name="{{options.keys()[38]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[38]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">40</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict40['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[39]}}">
+                <p class="label-row">
+                {% for choice in options.values()[39] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[39]}}-{{choice}}" name="{{options.keys()[39]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[39]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">41</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict41['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[40]}}">
+                <p class="label-row">
+                {% for choice in options.values()[40] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[40]}}-{{choice}}" name="{{options.keys()[40]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[40]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">42</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict42['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[41]}}">
+                <p class="label-row">
+                {% for choice in options.values()[41] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[41]}}-{{choice}}" name="{{options.keys()[41]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[41]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">43</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict43['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[42]}}">
+                <p class="label-row">
+                {% for choice in options.values()[42] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[42]}}-{{choice}}" name="{{options.keys()[42]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[42]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">44</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict44['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[43]}}">
+                <p class="label-row">
+                {% for choice in options.values()[43] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[43]}}-{{choice}}" name="{{options.keys()[43]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[43]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+<div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">45</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict45['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[14]}}">
+                <p class="label-row">
+                {% for choice in options.values()[44] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[44]}}-{{choice}}" name="{{options.keys()[44]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[44]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">46</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict46['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[45]}}">
+                <p class="label-row">
+                {% for choice in options.values()[45] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[45]}}-{{choice}}" name="{{options.keys()[45]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[45]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">47</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict47['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[46]}}">
+                <p class="label-row">
+                {% for choice in options.values()[46] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[46]}}-{{choice}}" name="{{options.keys()[46]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[46]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+        <div class="col-md-1 img-block" style="height: 20vh">
+          <h8 id="image-title">48</h8>
+          <img class=".label-image" src="../static/Pics/{{imageDict48['image_name']}}" / height="100" width="100">
+          <div class="btn-group" role="group" aria-label="...">
+              <div class="label-group" id="{{options.keys()[47]}}">
+                <p class="label-row">
+                {% for choice in options.values()[47] %}
+                    <span class="choice-selector">
+                      <input type="checkbox" id="{{options.keys()[47]}}-{{choice}}" name="{{options.keys()[47]}}-{{choice}}" value="1" style="background-color:{{choice}}">
+                      <label for="{{options.keys()[47]}}-{{choice}}" style="background-color:{{choice}}">{{choice}}</label>
+                    </span>
+                {% endfor %}
+              </p>
+            </div>
+        </div> 
+        </div>
+
+
+
+
+
+
+
+
+        <div>
+            <button type="submit" class="btn btn-success btn-lg btn-block">Next</button>
+          </form>
+        </div>
+
+        </div>
+    </body>
+</html>
