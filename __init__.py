@@ -253,4 +253,6 @@ def group_1():
         imageDict47=imageList[group_1_count+46],
         imageDict48=imageList[group_1_count+47],
         options=GROUP_1)
-app.run(debug=True, port=3000, host='0.0.0.0')
+if __name__ == '__main__':
+	app.debug = True
+	app.run(host = 'localhost', port = 5000)
