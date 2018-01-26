@@ -9,7 +9,7 @@ from collections import OrderedDict
 #Change File Paths
 READ_CSVPATH = 'read.csv'
 WRITE_CSVPATH = 'gender.csv'
-IMAGEPATH = 'static/Pics/'
+IMAGEPATH = '/var/www/FlaskApp/FlaskApp/static/Pics/'
 
 
 read_fieldnames=['image_name', 'gender-male','gender-female','gender-unknown', 'score']
